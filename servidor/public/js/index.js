@@ -31,7 +31,20 @@ $('#crearUsuario').on('click', function (e) {
     })
 })
 
+//delete a user
 
+function eliminar(id){
+    $.ajax('http://localhost:3000/api/users/'+ id,{
+        method: 'DELETE',
+        success: function(){
+            $('#user-' + id).remove();
+           console.log('el usuario se ha eliminado')
+        setTimeout(function(){
+            location.href = '/usuarios'}
+            ,2000)
+        }
+    })
+}
 
 
 

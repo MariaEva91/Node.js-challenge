@@ -11,6 +11,9 @@ body{
     width: 100%;
     height: 100px;
 }
+
+/*resgistro*/
+
 .form{
    margin-top: 4%;
     width: 40%;
@@ -32,4 +35,28 @@ body{
     background-color: #999966;
     margin-top: 10px;
     margin-left: 35%;
+};
+
+/*chat*/
+
+.main-container{
+    display: flex;
+    width: 800px;
+    height: 400px;
+}
+
+.usuarios{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+  
+}
+
+.mensajes{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    align-items: center;
 }

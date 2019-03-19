@@ -11,14 +11,30 @@
 </head>
 
 <body>
+    <nav class="nav"></nav>
     <h2>Bienvenido al Fizzmod Chat!</h2>
     <div class="main-container">
-        <div class="user-container"></div>
-        <div class="messages-container"></div>
+        <div class="usuarios">
+            
+        </div>
+        <div class="mensajes">
+            <ul id="messages"></ul>
+            <form action="">
+                <input id="text" type="text"><button id="send">Enviar</button>
+            </form>
+        </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
-    <script src="js/index.js"></script>
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 
 </html>
