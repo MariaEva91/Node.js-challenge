@@ -3,14 +3,13 @@ var router = express.Router();
 var path = require('path');
 const fs = require('fs');
 var mysql = require('mysql');
-var http = require('http').Server();
+var http = require('http');
 
 //conexion a la db
 
-var connection= mysql.createConnection({
+var con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    port: '8000',
     password: '',
     database: 'fizzmod'
   });
