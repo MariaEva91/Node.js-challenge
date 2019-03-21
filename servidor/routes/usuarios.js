@@ -4,11 +4,18 @@ var path = require('path');
 const fs = require('fs');
 var mysql = require('mysql');
 var http = require('http');
+<<<<<<< HEAD
 const fetch = require('node-fetch');
 
 //conexion a la db
 
 var con= mysql.createConnection({
+=======
+
+//conexion a la db
+
+var con = mysql.createConnection({
+>>>>>>> 54829f1d85e5be4477490e5f050da1892a111356
     host: 'localhost',
     user: 'root',
     password: '',

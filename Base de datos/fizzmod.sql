@@ -7,10 +7,17 @@
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 5.6.40
 
+<<<<<<< HEAD
 SET SQL_MODE  NO_AUTO_VALUE_ON_ZERO;
 SET AUTOCOMMIT  0;
 START TRANSACTION;
 SET time_zone  +00:00;
+=======
+SET SQL_MODE  "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT  0;
+START TRANSACTION;
+SET time_zone  "+00:00";
+>>>>>>> 54829f1d85e5be4477490e5f050da1892a111356
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,7 +35,11 @@ SET time_zone  +00:00;
 -- Estructura de tabla para la tabla `mensajes`
 --
 
+<<<<<<< HEAD
 CREATE TABLE mensajes (
+=======
+CREATE TABLE mensajes  (
+>>>>>>> 54829f1d85e5be4477490e5f050da1892a111356
   Id_mensaje tinyint(200) NOT NULL,
   Cuerpo text COLLATE latin1_spanish_ci NOT NULL,
   Creado_en date NOT NULL,
@@ -56,7 +67,11 @@ CREATE TABLE status_mensajes (
 
 CREATE TABLE status_usuarios (
   Id_status tinyint(1) NOT NULL,
+<<<<<<< HEAD
 Descripcion text COLLATE latin1_spanish_ci NOT NULL
+=======
+  Descripcion text COLLATE latin1_spanish_ci NOT NULL
+>>>>>>> 54829f1d85e5be4477490e5f050da1892a111356
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 -- --------------------------------------------------------
@@ -66,11 +81,19 @@ Descripcion text COLLATE latin1_spanish_ci NOT NULL
 --
 
 CREATE TABLE usuarios (
+<<<<<<< HEAD
   Id_usuarios tinyint(100) NOT NULL,
   Nombre varchar(30) COLLATE latin1_spanish_ci NOT NULL, 
   Apellido varchar(40) COLLATE latin1_spanish_ci NOT NULL,
   Nombre_de_usuario varchar(30) COLLATE latin1_spanish_ci NOT NULL,
   Email varchar(80) COLLATE latin1_spanish_ci NOT NULL,
+=======
+  Id_usuarios tinyint(100)  NOT NULL,
+  Nombre varchar(30) COLLATE latin1_spanish_ci NOT NULL,
+  Apellido varchar(40) COLLATE latin1_spanish_ci NOT NULL,
+  Nombre_de_usuario varchar(30) COLLATE latin1_spanish_ci NOT NULL,
+  Email varchar(80) COLLATE latin1_spanish_ci NOT NULL unique,
+>>>>>>> 54829f1d85e5be4477490e5f050da1892a111356
   Creado_en date NOT NULL,
   Actualizado_en date NOT NULL,
   Id_status tinyint(1) NOT NULL
