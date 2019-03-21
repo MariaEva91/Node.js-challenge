@@ -3,19 +3,19 @@ var router = express.Router();
 var path = require('path');
 const fs = require('fs');
 var mysql = require('mysql');
-var http = require('http').Server();
+var http = require('http');
+const fetch = require('node-fetch');
 
 //conexion a la db
 
-var connection= mysql.createConnection({
+var con= mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    port: '8000',
     password: '',
     database: 'fizzmod'
   });
 
-  //consulta
+  //consultas
 
  //para seleccionar una tabla y hacer consultas
 
@@ -28,10 +28,17 @@ const server = http.createServer((req,res)=>{
     })
     console.log(fields)
     console.table(results)
+    con.query("SELECT * FROM usuarios WHERE id=1",(err,result,field)=>{
+        if(err){
+            res.writeHead(400,{"content-type": "text/plain"})
+            res.end("Error")
+        }
+    })
+    console.log(field)
 
 })
 
-//para levantar la coenxion entre servidor y base de datos. 
+//para levantar la conexion entre servidor y base de datos. 
 con.connect(err=>{
     if(err){
         console.log(err)
@@ -43,10 +50,4 @@ con.connect(err=>{
 });
 
 
-
-
-
-
-  
-   
   module.exports = router;

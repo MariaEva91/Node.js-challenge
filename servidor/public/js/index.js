@@ -40,7 +40,7 @@ function eliminar(id){
             $('#user-' + id).remove();
            console.log('el usuario se ha eliminado')
         setTimeout(function(){
-            location.href = '/usuarios'}
+            location.href = '/chat'}
             ,2000)
         }
     })
@@ -51,42 +51,3 @@ function eliminar(id){
 
 
 
-
-// let form = document.querySelector("form");
-
-// form.addEventListener("submit", e => {
-//     
-
-//     let nombre = e.target[0].value;
-//     let apellido = e.target[1].value;
-//     let nombreUsuario = e.target[2].value;
-//     let email = e.target[3].value;
-
-//     console.log(nombre, apellido, nombreUsuario, email);
-
-//     localStorage.setItem('nombre', nombreUsuario);
-
-
-//    
-
-//     let xhr = new XMLHttpRequest;
-//     let user = {
-//         nombre: nombre,
-//         apellido: apellido,
-//         usuario: nombreUsuario,
-//         email: email
-//     };
-
-
-
-//     xhr.open("POST", user);
-//     xhr.addEventListener("load", () => {
-//         if (xhr.status === 200) {
-//             console.log('ok')
-//         }
-//     })
-
-//     xhr.send();
-
-//   //  location.href = 'http://localhost:3000/chat';
-// });
